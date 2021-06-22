@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Recommender</title>
+  
+<style>
+@mixin font-base {
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+body {
+  background-image: url('https://motionarray.imgix.net/preview-279485-UenCPR1wxc-high_0008.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h4 {
+	@include font-base;
+}
+
+p {
+	@include font-base;
+	color: snow;
+	font-size: 0.9rem;
+}
+
+body {
+        background-color:transparent;
+}
+
+.container {
+	width: 560px;
+	margin: 0 auto;
+}
+
+header,
+section {
+	position: fixed;
+	text-align: center;
+	width: 560px;
+	background-color:transparent;
+}
+
+
+section {
+	top: 70px;
+}
+
+.logo {
+	width: 120px;
+	padding: 10px;
+}
+
+main {
+	padding: 380px 18px 10px;
+}
+h2{
+   @include font-base;
+   color:white;
+   }
+
+article {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	border: 2px solid white;
+	border-radius: 8px;
+	margin: 0 auto;
+	&:hover {
+		border: 2px solid #ff9999;
+	}
+}
+
+.thumb {
+	height: 90px;
+	border-radius: 2px;
+}
+
+.details {
+	padding: 8px 22px;
+}
+
+.footer {
+  font-size: 1.5rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+</style>
+</head>
+   <div class="container">
+
+	<header>
+               <h1 class="Underline"><a href="/"><span>Great Choice</a></h1>
+               <p>{{search_name}}</p>
+
+         </header>
+
+
+	<section id="video">
+          <iframe width="560" height="315" src={{V_Url[0]}} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+
+	</section>
+
+	<main>
+             <h2>Some more Videos for you</h2>
+
+                <article class="item">
+                <img src={{tumbnail[1]}} alt="" class="thumb">
+	        <div class="details">
+		<a href={{V_Url[1]}}>{{Title[1]}}</a>
+		<p>Views:{{Views[1]}} , Likes:{{Likes[1]}} , Dislikes:{{Dislike[1]}}</p>
+		</div>
+           </article>          
+        
+               <article class="item" >
+               <img src={{tumbnail[2]}} alt="" class="thumb">
+               <div class="details">
+               <a href={{V_Url[2]}}>{{Title[2]}}</a>
+	       <p>Views:{{Views[2]}} , Likes:{{Likes[2]}} , Dislikes:{{Dislike[2]}}</p>
+		</div>
+
+	</article>
+         
+              <article class="item">
+              <img src={{tumbnail[3]}} alt="" class="thumb">
+	      <div class="details">
+	      <a href={{V_Url[3]}}>{{Title[3]}}</a>
+	      <p>Views:{{Views[3]}} , Likes:{{Likes[3]}} , Dislike:{{Dislike[3]}}</p>
+	      </div>
+
+	</article>
+
+         <article class="item">
+
+          <img src={{tumbnail[4]}} alt="" class="thumb">
+	  <div class="details">
+	  <a href={{V_Url[4]}}>{{Title[4]}}</a>
+	  <p>Views:{{Views[4]}} , Likes:{{Likes[4]}} , Dislike:{{Dislike[4]}}</p>
+	  </div>
+
+	</article>
+      
+       <article class="item">
+
+          <img src={{tumbnail[5]}} alt="" class="thumb">
+	  <div class="details">
+	  <a href={{V_Url[5]}}>{{Title[5]}}</a>
+	  <p>Views:{{Views[5]}} , Likes:{{Likes[5]}} , Dislike:{{Dislike[5]}}</p>
+	  </div>
+
+	</article>
+        
+       <article class="item">
+
+          <img src={{tumbnail[6]}} alt="" class="thumb">
+	  <div class="details">
+	  <a href={{V_Url[6]}}>{{Title[6]}}</a>
+	  <p>Views:{{Views[6]}} , Likes:{{Likes[6]}} , Dislike:{{Dislike[6]}}</p>
+	  </div>
+
+	</article>
+            
+
+  </main>
+
+           
+
+           <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+           <script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+
+   
+    
+
+</div>
+<div class="footer">
+  <p>By Vinay Babu K.J</p>
+</div>
+</html>
